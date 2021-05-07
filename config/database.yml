@@ -52,3 +52,4 @@ production:
   database: clarisapp_production
   username: clarisapp
   password: <%= ENV['CLARISAPP_DATABASE_PASSWORD'] %>
+

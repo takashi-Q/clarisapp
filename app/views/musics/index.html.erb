@@ -1,0 +1,34 @@
+<div class="chat-header">
+  <div class="left-header">
+    <div class="header-title">
+      ClariS Music Shearing
+    </div>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+    <%= search_form_for @p, url: musics_search_path do |f| %>
+    <%= f.label :name_eq, '曲名' %>
+    <%= f.collection_select :name_eq, @music_name, :name, :name, include_blank: '指定なし' %>
+    <br>
+    <%= f.label :size_eq, '作詞家' %>
+    <%= f.collection_select :lyricist_eq, @music_lyricist, :lyricist, :lyricist, include_blank: '指定なし'%>
+    <br>
+    <%= f.label :year_eq, 'リリース' %>
+    <%= f.collection_select :year_eq, @music_year, :year, :year, include_blank: '指定なし'%>
+   <br>
+   <%= f.label :position_eq, 'ポジション' %>
+   <%= f.collection_select :position_eq, @music_position, :position, :position, include_blank: '指定なし'%>
+   <br>
+   <%= f.label :category_name_eq, '作曲家' %>
+   <%= f.collection_select :category_name_eq, @category_name, :name, :name, include_blank: '指定なし' %>
+   <br>
+    <br>
+    <%= f.submit '検索' %>
+    </div>
+  </div>
+</div>
+
+<div class="messages">
+     
+
+<% end %>
